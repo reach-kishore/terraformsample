@@ -17,7 +17,7 @@ def getPR():
     return (json.loads(response.text)[0]['number'])
 
 def readAddedFiles(prno):
-    files = []
+    files = ''
     
     readPullURL1 = readPullURL.replace("PRNBR",str(prno))
     payload={}
@@ -32,7 +32,7 @@ def readAddedFiles(prno):
 
     for i in json.loads(response.text): 
         if i["status"] == "added":
-          files.append(i["filename"].split("/")[1])
+          files = files + (i["filename"].split("/")[1]) + "|"
 
     return files
 prno = getPR()
