@@ -30,13 +30,11 @@ def readAddedFiles(prno):
 
     response = requests.request("GET", readPullURL1, headers=headers, data=payload)
 
-    print(response.text)
     for i in json.loads(response.text): 
         if i["status"] == "added":
           files.append(i["filename"].split("/")[1])
 
     return files
 prno = getPR()
-print(prno)
 filesadded = readAddedFiles(prno)
 print(filesadded) 
