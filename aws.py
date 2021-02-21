@@ -12,6 +12,7 @@ def getPR():
       'Content-Type': 'application/json'
     }
     
+    
     response = requests.request("GET", pullrequestURL, headers=headers, data=payload)
     
     return (json.loads(response.text)[0]['number'])
