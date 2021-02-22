@@ -1,6 +1,7 @@
 import requests
 import json
 
+
 pullrequestURL = "https://api.github.com/repos/reach-kishore/terraformsample/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc"
 
 readPullURL = "https://api.github.com/repos/reach-kishore/terraformsample/pulls/PRNBR/files"
