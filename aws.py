@@ -6,6 +6,7 @@ pullrequestURL = "https://api.github.com/repos/reach-kishore/terraformsample/pul
 
 readPullURL = "https://api.github.com/repos/reach-kishore/terraformsample/pulls/PRNBR/files"
 
+
 def getPR():
     payload={}
     headers = {
