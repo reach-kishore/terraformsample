@@ -1,9 +1,11 @@
 import requests
 import json
 
+
 pullrequestURL = "https://api.github.com/repos/reach-kishore/terraformsample/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc"
 
 readPullURL = "https://api.github.com/repos/reach-kishore/terraformsample/pulls/PRNBR/files"
+
 
 def getPR():
     payload={}
@@ -11,6 +13,8 @@ def getPR():
       'Accept': 'application/vnd.github.v3+json',
       'Content-Type': 'application/json'
     }
+    
+    
     
     response = requests.request("GET", pullrequestURL, headers=headers, data=payload)
     
